@@ -1,0 +1,40 @@
+.services-section {
+  padding: 94px 0 0;
+}
+
+.services-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-item {
+    position: relative;
+  }
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+
+.label-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $primary-white-color;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  padding: 27px 82px;
+}

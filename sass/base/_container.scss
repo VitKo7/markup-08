@@ -1,0 +1,15 @@
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  .hero & {
+    padding: 200px 0;
+  }
+
+  .header & {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}

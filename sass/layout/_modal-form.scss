@@ -1,0 +1,161 @@
+.modal-form {
+  display: flex;
+  flex-direction: column;
+
+  &-input-wrapper {
+    display: block;
+    position: relative;
+    margin-top: 4px;
+  }
+
+  &-message {
+    margin-top: 4px;
+  }
+
+  &-title {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $title-text-color;
+    margin-bottom: 12px;
+  }
+
+  &-input {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    padding-left: 40px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.modal-form-field {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+  color: $primary-text-color;
+
+  /* ! странно: почему не работает правило на последний элемент? а на все? */
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.modal-form-message {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  padding: 12px 16px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &::placeholder {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1, 167;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.modal-form-input:focus,
+.modal-form-message:focus {
+  outline: none;
+  border: 1px solid $accent-color;
+}
+
+.modal-form-btn {
+  width: 200px;
+  height: 50px;
+  background: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 auto;
+  outline: none;
+  border: none;
+
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  /* display: flex;
+  align-items: center;
+  text-align: center; */
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+
+.contact-form-policy-label {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  padding-top: 10px;
+  padding-right: 0;
+  padding-bottom: 30px;
+  padding-left: 12px;
+
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: $primary-text-color;
+
+  & > a {
+    text-decoration: underline;
+    color: $accent-color;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $title-text-color;
+    margin-right: 10px;
+    border-radius: 2px;
+    transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $title-text-color;
+    margin-right: 10px;
+    border-radius: 2px;
+    transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.modal-form-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 18px;
+  height: 18px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-input:focus + .modal-form-icon {
+  fill: $accent-color;
+}
+
+.modal-form-policy:checked + .contact-form-policy-label::before {
+  background-image: url(../img/svg/icon-check.svg);
+  width: 16px;
+  height: 15px;
+  border: none;
+}
