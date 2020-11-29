@@ -1,57 +1,95 @@
-.features-section {
-  padding: 94px 0 0;
-}
-
 .section .features {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
-.section .title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  margin-bottom: 10px;
+@media screen and (min-width: 480px) {
+  .features-item {
+    width: 450px;
+
+    &:nth-child(-n + 3) {
+      margin-bottom: 30px;
+    }
+
+    &::before {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 120px;
+      background-color: $team-background;
+      margin-bottom: 30px;
+      background-repeat: no-repeat;
+      background-size: 70px 70px;
+      background-position: center;
+    }
+
+    &-antenna::before {
+      background-image: url(../img/svg/antenna.svg);
+    }
+    &-clock::before {
+      background-image: url(../img/svg/clock.svg);
+    }
+    &-diagram::before {
+      background-image: url(../img/svg/diagram.svg);
+    }
+    &-astronaut::before {
+      background-image: url(../img/svg/astronaut.svg);
+    }
+  }
+
+  .section .title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.143;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $title-text-color;
+    margin-bottom: 10px;
+  }
+
+  .features .text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+    text-align: left;
+  }
 }
 
-.features .text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+@media screen and (min-width: 768px) {
+  .features-item {
+    width: 354px;
+    margin-bottom: 0;
+
+    // todo the formula below doesnot work, why???
+    &:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+
+    // ! padding over 2nd element in the list???
+
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+  }
+
+  .section .title {
+    text-align: left;
+  }
 }
 
-.features-item {
-  width: 270px;
+@media screen and (min-width: 1200px) {
+  .features-item {
+    width: 270px;
+    margin-bottom: 0;
 
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
+    // ! rule about 'margin-bottom: 0;' - doesnot work, why?
 
-  &::before {
-    display: block;
-    content: '';
-    /* width: 100%; */
-    height: 120px;
-    background-color: $team-background;
-    margin-bottom: 30px;
-    background-repeat: no-repeat;
-    background-size: 70px 70px;
-    background-position: center;
-  }
-
-  &-antenna::before {
-    background-image: url(../img/svg/antenna.svg);
-  }
-  &-clock::before {
-    background-image: url(../img/svg/clock.svg);
-  }
-  &-diagram::before {
-    background-image: url(../img/svg/diagram.svg);
-  }
-  &-astronaut::before {
-    background-image: url(../img/svg/astronaut.svg);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
