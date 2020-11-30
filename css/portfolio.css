@@ -234,25 +234,32 @@ h6 {
 }
 
 .footer {
-  /* width: 1600px; */
   margin: 0 auto;
   color: #ffffff;
   background-color: #2f303a;
-  padding: 60px 0;
+}
+
+.footer-address {
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  max-width: 154px;
 }
 
 .footer .logo-Studio {
   color: #ffffff;
 }
 
-.footer .mail,
-.footer .tel {
+.footer__mail,
+.footer__tel {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer .address,
-.footer .mail,
-.footer .tel {
+.footer__address,
+.footer__mail,
+.footer__tel {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -262,15 +269,12 @@ h6 {
 
 .footer-list {
   margin-top: 20px;
+  display: block;
+  text-align: center;
 }
 
 .footer-item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.footer-combine {
-  display: flex;
-  justify-content: space-between;
+  margin-bottom: 8px;
 }
 
 .slogan {
@@ -286,12 +290,13 @@ h6 {
 }
 
 .footer-social {
-  margin-top: 12px;
-  /* margin-bottom: 100px;  */
-  margin-left: 70px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .footer-social-list {
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   /* margin: 16px 32px 30px; */
@@ -317,6 +322,12 @@ h6 {
   fill: #ffffff;
   width: 20px;
   height: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .email-sub {

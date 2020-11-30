@@ -1,41 +1,45 @@
 .footer {
-  /* width: 1600px; */
   margin: 0 auto;
   color: $primary-white-color;
   background-color: $footer-background;
-  padding: 60px 0;
+}
 
-  & .logo-Studio {
-    color: $primary-white-color;
-  }
+.footer-address {
+  display: block;
+  margin: 0 auto;
+}
 
-  & .mail,
-  & .tel {
-    color: rgba(255, 255, 255, 0.6);
-  }
+.footer-logo {
+  max-width: 154px;
+}
 
-  & .address,
-  & .mail,
-  & .tel {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-  }
+.footer .logo-Studio {
+  color: $primary-white-color;
+}
+
+.footer__mail,
+.footer__tel {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__address,
+.footer__mail,
+.footer__tel {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 
 .footer-list {
   margin-top: 20px;
+  display: block;
+  text-align: center;
 }
 
 .footer-item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.footer-combine {
-  display: flex;
-  justify-content: space-between;
+  margin-bottom: 8px;
 }
 
 .slogan {
@@ -51,11 +55,12 @@
 }
 
 .footer-social {
-  margin-top: 12px;
-  /* margin-bottom: 100px;  */
-  margin-left: 70px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
 
   &-list {
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     /* margin: 16px 32px 30px; */
@@ -83,6 +88,21 @@
     height: 20px;
   }
 }
+
+// ! ------------------------ DESKTOP - 1200px
+
+@media screen and (min-width: 1200px) {
+  .footer-item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+// .footer-combine {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+// todo: reconsider this section:
 
 .email-sub {
   margin-top: 12px;
