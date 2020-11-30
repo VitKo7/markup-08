@@ -15,7 +15,7 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -35,10 +35,6 @@ h4,
 h5,
 h6 {
   color: #212121;
-}
-
-img {
-  display: block;
 }
 
 .link {
@@ -350,7 +346,7 @@ img {
   .hero-title {
     font-size: 44px;
     line-height: 1.36;
-    width: 696px;
+    max-width: 696px;
   }
 }
 
@@ -388,9 +384,9 @@ img {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .features-item {
-    max-width: 450px;
+    width: 100%;
   }
   .features-item::before {
     display: block;
@@ -529,6 +525,7 @@ img {
 }
 
 .team-member-item {
+  width: 100%;
   background: #ffffff;
   /* material shadow v1 */
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -603,6 +600,9 @@ img {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team-member-item {
+    max-width: 354px;
+  }
   .team-member-item:nth-child(-n + 2) {
     margin-bottom: 30px;
   }
@@ -612,6 +612,9 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
+  .team-member-item {
+    max-width: 270px;
+  }
   .section-title {
     font-weight: 700;
     font-size: 36px;
@@ -684,7 +687,14 @@ img {
   fill: #2196f3;
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .clients-item {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .clients-item:nth-child(2n + 1) {
     margin-right: 30px;
   }

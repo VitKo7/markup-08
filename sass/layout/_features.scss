@@ -11,9 +11,9 @@
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .features-item {
-    max-width: 450px;
+    width: 100%;
 
     &::before {
       display: block;
