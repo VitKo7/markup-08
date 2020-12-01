@@ -51,18 +51,15 @@ h6 {
   outline: 1px solid red;
 }
 
-@media screen and (min-width: 1200px) {
-  .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
-}
-
 .container {
   width: 100%;
   padding: 0 15px;
   outline: 1px solid blue;
   text-align: center;
+}
+
+.header .container {
+  position: relative;
 }
 
 @media screen and (min-width: 480px) {
@@ -81,6 +78,10 @@ h6 {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
+  }
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -137,23 +138,22 @@ h6 {
 }
 
 /* todo не могу убрать рамку с кнопки под фокусом... прописано свойстввами браузера */
-.navigation {
+.header .container {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ececec;
 }
 
 .logo.link {
-  width: 145px;
-  height: 31px;
-  margin-top: 24px;
-  margin-bottom: 25px;
-  margin-right: 93px;
+  width: 134px;
+  height: 28px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-Web,
 .logo-Studio {
-  font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
@@ -168,12 +168,12 @@ h6 {
   color: #000000;
 }
 
-.site-nav {
-  display: flex;
-  align-items: center;
-}
-
 .site-nav .link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.167;
+  text-align: center;
+  letter-spacing: 0.02em;
   color: #212121;
 }
 
@@ -186,8 +186,100 @@ h6 {
   color: #2196f3;
 }
 
+.current {
+  position: relative;
+}
+
+.current::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
+  margin-top: 28px;
+  align-items: baseline;
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .menu-button {
+    display: inline-flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .menu-button:hover .icon-menu,
+  .menu-button:focus .icon-menu,
+  .menu-button:hover .icon-cross,
+  .menu-button:focus .icon-cross {
+    outline: none;
+    outline-color: none;
+    fill: #2196f3;
+    cursor: pointer;
+  }
+  .menu-button .icon-cross {
+    display: none;
+  }
+  .menu-button.is-open .icon-cross {
+    display: block;
+  }
+  .menu-button.is-open .icon-menu {
+    display: none;
+  }
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 101%;
+    left: 0;
+    min-height: 393px;
+    width: 100%;
+    background: #ffffff;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+  .menu-container.is-open {
+    display: block;
+  }
+  .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .site-nav {
+    margin: 0 auto;
+  }
+  .navigation-list-item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .header-contact-list {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo.link {
+    width: 145px;
+    height: 31px;
+    margin-top: 24px;
+    margin-bottom: 25px;
+    margin-right: 93px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .navigation-list-item:not(:last-child) {
+    margin-right: 50px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+}
+
 /* .list .mail {
-  color: $accent-color;
+   color: $accent-color;
 } */
 .list .mail:hover,
 .list .mail:focus,
@@ -204,13 +296,6 @@ h6 {
   line-height: 1.14;
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* ! */
-.navigation-list-item:not(:last-child) {
-  margin-right: 50px;
-  margin-top: 32px;
-  margin-bottom: 32px;
 }
 
 .header-contact-list {
@@ -263,30 +348,6 @@ h6 {
   margin-right: 30px;
 }
 
-.header-line {
-  /* border bottom ? */
-  /* width: 1600px; */
-  display: block;
-  margin: 0 auto;
-  border: 1px solid #ececec;
-}
-
-.current {
-  position: relative;
-}
-
-.current::after {
-  position: absolute;
-  display: block;
-  content: '';
-  width: 100%;
-  height: 4px;
-  background: #2196f3;
-  border-radius: 2px;
-  margin-top: 28px;
-  align-items: baseline;
-}
-
 .hero-title {
   color: #ffffff;
   font-weight: 900;
@@ -295,7 +356,6 @@ h6 {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  background-color: red;
   max-width: 360px;
   display: block;
   margin: 0 auto;
