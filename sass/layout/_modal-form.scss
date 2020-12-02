@@ -13,10 +13,9 @@
   }
 
   &-title {
-    font-family: Roboto;
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.03em;
     color: $title-text-color;
@@ -98,15 +97,17 @@
   display: flex;
   align-items: center;
   font-size: 12px;
-  padding-top: 10px;
-  padding-right: 0;
-  padding-bottom: 30px;
-  padding-left: 12px;
+
+  padding: 10px 0 30px;
+  // padding-top: 10px;
+  // padding-right: 0;
+  // padding-bottom: 30px;
+  // padding-left: 0;
 
   font-family: Roboto;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
   color: $primary-text-color;
 
@@ -158,4 +159,18 @@
   width: 16px;
   height: 15px;
   border: none;
+}
+
+// ! --------------------------------------------- DESKTOP - 1200px
+
+@media screen and (min-width: 1200px) {
+  .modal-form-title {
+    line-height: 1.15;
+  }
+
+  .contact-form-policy-label {
+    font-size: 14px;
+    line-height: 1.714;
+    padding-left: 12px;
+  }
 }

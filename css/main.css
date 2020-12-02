@@ -47,13 +47,11 @@ h6 {
 
 .section {
   padding-bottom: 60px;
-  outline: 1px solid red;
 }
 
 .container {
   width: 100%;
   padding: 0 15px;
-  outline: 1px solid blue;
   text-align: center;
 }
 
@@ -98,8 +96,8 @@ h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -135,7 +133,13 @@ h6 {
   fill: #2196f3;
 }
 
-/* todo не могу убрать рамку с кнопки под фокусом... прописано свойстввами браузера */
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
+}
+
 .header-line {
   display: block;
   border-bottom: 1px solid #ececec;
@@ -151,9 +155,10 @@ h6 {
 
 .logo-Web,
 .logo-Studio {
+  font-family: Raleway;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
 }
 
@@ -388,6 +393,11 @@ h6 {
 }
 
 @media screen and (min-width: 1200px) {
+  .logo-Web,
+  .logo-Studio {
+    font-size: 26px;
+    line-height: 1.192;
+  }
   .logo.link {
     width: 145px;
     height: 31px;
@@ -1166,10 +1176,9 @@ h6 {
 }
 
 .modal-form-title {
-  font-family: Roboto;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
@@ -1249,14 +1258,11 @@ h6 {
   display: flex;
   align-items: center;
   font-size: 12px;
-  padding-top: 10px;
-  padding-right: 0;
-  padding-bottom: 30px;
-  padding-left: 12px;
+  padding: 10px 0 30px;
   font-family: Roboto;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
   color: #757575;
 }
@@ -1308,6 +1314,17 @@ h6 {
   width: 16px;
   height: 15px;
   border: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form-title {
+    line-height: 1.15;
+  }
+  .contact-form-policy-label {
+    font-size: 14px;
+    line-height: 1.714;
+    padding-left: 12px;
+  }
 }
 
 .is-hidden {
