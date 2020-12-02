@@ -45,13 +45,14 @@ h6 {
 }
 
 .section {
-  padding-top: 60px;
   padding-bottom: 60px;
+  outline: 1px solid red;
 }
 
 .container {
   width: 100%;
   padding: 0 15px;
+  outline: 1px solid blue;
   text-align: center;
 }
 
@@ -77,12 +78,12 @@ h6 {
     max-width: 1200px;
   }
   .section {
-    padding-top: 94px;
     padding-bottom: 94px;
   }
 }
 
-.header .container {
+.header-line {
+  display: block;
   border-bottom: 1px solid #ececec;
 }
 
@@ -350,6 +351,7 @@ h6 {
   .menu-container {
     display: flex;
     justify-content: space-between;
+    width: 1200px;
   }
   .list .link,
   .list .mail,
@@ -388,6 +390,8 @@ h6 {
   margin: 0 auto;
   color: #ffffff;
   background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-logo {
