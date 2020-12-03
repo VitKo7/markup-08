@@ -100,13 +100,13 @@
     margin: 0 auto;
     margin-bottom: 14px;
   }
-
-  .filter-list-item {
-    margin-bottom: 16px;
-  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+  .filter-list-item {
+    margin-bottom: 16px;
+  }
+
   .work-samples-item {
     width: 354px;
   }
@@ -125,7 +125,8 @@
 @media screen and (min-width: 1200px) {
   .filter-list {
     margin: 0 auto;
-    margin-bottom: 34px;
+    margin-bottom: 50px;
+    padding-top: 94px;
   }
 
   .work-samples-item {
