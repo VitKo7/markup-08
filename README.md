@@ -1,2 +1,2 @@
-# goit-markup-hw-08
+# markup-08
 Styles practice
